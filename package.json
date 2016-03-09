@@ -2,15 +2,15 @@
   "name": "restify-errors-thrower",
   "version": "1.0.0",
   "main": "lib/index.js",
-  "description": "Helper functions in order to throw errors.",
-  "homepage": "http://www.restify.com",
+  "description": "NPM module that allow to easily throw Restify errors.",
+  "homepage": "https://github.com/simonepri/restify-errors-thrower/",
   "author": {
     "name": "Simone Primarosa",
     "email": "simone.pri@hotmail.it"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/restify/errors.git"
+    "url": "https://github.com/simonepri/restify-errors-thrower.git"
   },
   "license": "MIT",
   "files": [
@@ -25,10 +25,10 @@
     "inherit errors",
     "http errors",
     "http status code",
-    "rest errors"
-    "theow errors"
+    "rest errors",
+    "throw errors"
   ],
   "dependencies": {
-    "restify-errors": "^4.2.0",
+    "restify-errors": "^4.2.0"
   }
 }

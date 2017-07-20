@@ -1,7 +1,7 @@
 {
   "name": "restify-errors-thrower",
   "version": "2.0.0",
-  "description": "Throw restify errors easily!",
+  "description": "Throw Restify errors easily and consistently!",
   "main": "index.js",
   "dependencies": {
     "restify-errors": "^4.3.0"

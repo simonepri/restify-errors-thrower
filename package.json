@@ -4,7 +4,8 @@
   "description": "Throw Restify errors easily and consistently!",
   "main": "index.js",
   "dependencies": {
-    "restify-errors": "^4.3.0"
+    "restify-errors": "^4.3.0",
+    "coverage": "nyc npm test && nyc report --reporter=text-lcov > coverage.lcov && codecov"
   },
   "devDependencies": {
     "ava": "*",

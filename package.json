@@ -7,6 +7,7 @@
     "restify-errors": "^4.3.0"
   },
   "devDependencies": {
+    "ava": "*",
     "xo": "*"
   },
   "scripts": {

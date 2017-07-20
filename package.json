@@ -4,7 +4,7 @@
   "description": "Throw restify errors easily!",
   "main": "index.js",
   "dependencies": {
-    "restify-errors": "^4.2.0"
+    "restify-errors": "^4.3.0"
   },
   "devDependencies": {},
   "scripts": {

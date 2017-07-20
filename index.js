@@ -2,26 +2,49 @@
 
 const errors = require('restify-errors');
 
-var thrower = {};
+function errorExist(type) {
+	return Object.prototype.hasOwnProperty.call(errors, type);
+}
 
-thrower.throw = function(type, msg, context) {
-	if(errors.hasOwnProperty(type)) {
-		return new errors[type]({
-			message: msg,
-			context: context
-		});
+/**
+ * Throw a specific Restify error.
+ * @param  {String} type The type of error to throw
+ * @param  {String} msg An error message
+ * @param  {(String|Number)} errno An unique error id code to let clients handle the error
+ * @param  {...} [debug] An undefined number of contex-debug informations to pass
+ */
+function throwError(type, msg, errno, ...debug) {
+	debug = debug || [];
+	if (!errorExist(type)) {
+		type = 'InternalServerError';
+		debug.push('Invalid error type provided:' + type);
 	}
-	return new errors.InternalServerError({
+	return new errors[type]({
 		message: msg,
-		context: context
+		context: {
+			errno,
+			debug
+		}
 	});
-};
+}
 
-thrower.throwed = function(err, type) {
-	if(type !== undefined && errors.hasOwnProperty(type)) {
-		return err instanceof errors[type];
+/**
+ * Checks if a specific Restify error was thrown.
+ * @param  {Object} err The object to check
+ * @param  {String} [type] The type of error that the object should be instance of
+ * @returns  {Boolean} true if the type match, false otherwise
+ */
+function errorThrown(err, type) {
+	if (type !== undefined) {
+		if (errorExist(type)) {
+			return err instanceof errors[type];
+		}
+		return false;
 	}
 	return err instanceof Error;
-};
+}
 
-module.exports = thrower;
+module.exports = {
+	throw: throwError,
+	thrown: errorThrown
+};

@@ -5,7 +5,7 @@ const errors = require('restify-errors');
 var thrower = {};
 
 thrower.throw = function(type, msg, context) {
-	if(errors.hasOwnProperty(type) {
+	if(errors.hasOwnProperty(type)) {
 		return new errors[type]({
 			message: msg,
 			context: context

@@ -1,34 +1,26 @@
 {
   "name": "restify-errors-thrower",
   "version": "1.0.0",
-  "main": "lib/index.js",
-  "description": "NPM module that allow to easily throw Restify errors.",
-  "homepage": "https://github.com/simonepri/restify-errors-thrower/",
+  "description": "Throw restify errors easily!",
+  "main": "index.js",
+  "dependencies": {
+    "restify-errors": "^4.2.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/simonepri/restify-errors-thrower.git"
+  },
   "author": {
     "name": "Simone Primarosa",
     "email": "simone.pri@hotmail.it"
   },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/simonepri/restify-errors-thrower.git"
-  },
   "license": "MIT",
-  "files": [
-    "lib"
-  ],
-  "keywords": [
-    "restify-errors-thrower",
-    "restify-errors",
-    "restify",
-    "errors",
-    "custom errors",
-    "inherit errors",
-    "http errors",
-    "http status code",
-    "rest errors",
-    "throw errors"
-  ],
-  "dependencies": {
-    "restify-errors": "^4.2.0"
-  }
+  "bugs": {
+    "url": "https://github.com/simonepri/restify-errors-thrower/issues"
+  },
+  "homepage": "https://github.com/simonepri/restify-errors-thrower#readme"
 }

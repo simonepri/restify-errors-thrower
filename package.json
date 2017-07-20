@@ -10,6 +10,9 @@
     "ava": "*",
     "xo": "*"
   },
+  "engines": {
+    "node": ">=6"
+  },
   "scripts": {
     "test": "xo && ava"
   },

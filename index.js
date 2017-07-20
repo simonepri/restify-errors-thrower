@@ -11,7 +11,7 @@ function errorExist(type) {
  * @param  {string} type The type of error to throw
  * @param  {string} msg An error message
  * @param  {(string|number)} errno An unique error id code to let clients handle the error
- * @param  {...} [debug] An undefined number of contex-debug information to pass
+ * @param  {...} [debug] An indefinite number of contex-debug information to pass
  */
 function throwError(type, msg, errno, ...debug) {
 	debug = debug || [];

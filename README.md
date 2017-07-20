@@ -25,8 +25,8 @@ server.get('/foo', function(req, res, next) {
   if (!req.query.foo) {
     return next(thrower.throw('BadRequestError', 'foo undefined', 'R.FOO.0');
   }
-  if (req.query.foo === '42') {
-    return next(thrower.throw('BadRequestError', 'foo cannot be the answer to the meaning of life', 'R.FOO.1');
+  if (req.query.foo !== 'unicorn') {
+    return next(thrower.throw('BadRequestError', 'foo should be an 🦄!', 'R.FOO.1');
   }
 
   // Adds debug info

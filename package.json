@@ -11,7 +11,7 @@
     "xo": "*"
   },
   "scripts": {
-    "test": "test"
+    "test": "xo && ava"
   },
   "repository": {
     "type": "git",

@@ -8,9 +8,9 @@ function errorExist(type) {
 
 /**
  * Throws a specific Restify error.
- * @param  {String} type The type of error to throw
- * @param  {String} msg An error message
- * @param  {(String|Number)} errno An unique error id code to let clients handle the error
+ * @param  {string} type The type of error to throw
+ * @param  {string} msg An error message
+ * @param  {(string|number)} errno An unique error id code to let clients handle the error
  * @param  {...} [debug] An undefined number of contex-debug information to pass
  */
 function throwError(type, msg, errno, ...debug) {
@@ -30,9 +30,9 @@ function throwError(type, msg, errno, ...debug) {
 
 /**
  * Checks if a specific Restify error was thrown.
- * @param  {Object} err The object to check
- * @param  {String} [type] The type of error that the object should be instance of
- * @returns  {Boolean} true if the type match, false otherwise
+ * @param  {object} err The object to check
+ * @param  {string} [type] The type of error that the object should be instance of
+ * @returns  {boolean} true if the type match, false otherwise
  */
 function errorThrown(err, type) {
 	if (type !== undefined) {

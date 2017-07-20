@@ -6,7 +6,9 @@
   "dependencies": {
     "restify-errors": "^4.3.0"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "xo": "*"
+  },
   "scripts": {
     "test": "test"
   },

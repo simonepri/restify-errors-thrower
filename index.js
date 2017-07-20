@@ -19,13 +19,15 @@ function throwError(type, msg, errno, ...debug) {
 		type = 'InternalServerError';
 		debug.push('Invalid error type provided:' + type);
 	}
-	return new errors[type]({
+	const err = new errors[type]({
 		message: msg,
 		context: {
 			errno,
 			debug
 		}
 	});
+	err.body.errno = errno;
+	return err;
 }
 
 /**

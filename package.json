@@ -27,6 +27,18 @@
     "name": "Simone Primarosa",
     "email": "simone.pri@hotmail.it"
   },
+  "keywords": [
+    "restify-errors-thrower",
+    "restify-errors",
+    "restify",
+    "errors",
+    "custom errors",
+    "inherit errors",
+    "http errors",
+    "http status code",
+    "rest errors",
+    "throw errors"
+  ],
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/simonepri/restify-errors-thrower/issues"

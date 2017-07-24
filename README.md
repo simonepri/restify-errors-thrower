@@ -93,6 +93,24 @@ An indefinite number of contex information to collect.<br>
 This is particular useful to send contex details to your logger!<br>
 This will never sent to the client so you can store server critical messages. (E.g; errors coming from third pary APIs or errors coming from your DB)
 
+### thrown(err, [type])
+
+Checks if a specific Restify error was thrown.
+
+#### err
+
+Type: `object`
+
+The object to check
+
+#### type
+
+Type: `string`
+Default: `undefined`
+
+The type of error that the object should be instance of.
+If undefined it just checks if the object is instance of Error.
+
 ## Authors
 * **Simone Primarosa** - [simonepri](https://github.com/simonepri)
 

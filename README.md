@@ -109,7 +109,6 @@ Type: `string`
 Default: `undefined`
 
 The type of error that the object should be instance of.
-If undefined it just checks if the object is instance of Error.
 
 ## Authors
 * **Simone Primarosa** - [simonepri](https://github.com/simonepri)

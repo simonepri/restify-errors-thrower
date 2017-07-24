@@ -37,13 +37,10 @@ function throwError(type, msg, errno, ...debug) {
  * @returns  {boolean} true if the type match, false otherwise
  */
 function errorThrown(err, type) {
-	if (type !== undefined) {
-		if (errorExist(type)) {
-			return err instanceof errors[type];
-		}
-		return false;
+	if (errorExist(type)) {
+		return err instanceof errors[type];
 	}
-	return err instanceof Error;
+	return false;
 }
 
 module.exports = {

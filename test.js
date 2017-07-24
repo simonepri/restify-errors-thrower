@@ -4,8 +4,8 @@ import m from '.';
 test('should throw InternalServer error with an invalid type', t => {
 	const out = m.throw('a', 'An error message', 'errorno');
 	t.is(out.body.code, 'InternalServer');
-	t.is(out.message, 'b');
-	t.is(out.body.errno, 'c');
+	t.is(out.message, 'An error message');
+	t.is(out.body.errno, 'errorno');
 	t.is(out.context.debug[0], 'Invalid error type provided:InternalServerError');
 });
 

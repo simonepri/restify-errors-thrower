@@ -30,3 +30,23 @@ test('error is present with debug', t => {
 	t.is(pres.context.debug[1], 33);
 	t.is(pres.context.debug.length, 2);
 });
+
+test('type undefined', t => {
+	const out = m.throw('a', 'b', 'c');
+	t.is(m.thrown(out), true);
+});
+
+test('type undefined, error exists', t => {
+	const out = m.throw('InternalError', 'Unexpected internal error', 500);
+	t.is(m.thrown(out), true);
+});
+
+test('type defined, error does not exist', t => {
+	const out = m.throw('InexistentError', 'This error does not exist', 130);
+	t.is(m.thrown(out, 'InexistentError'), false);
+});
+
+test('type defined, error exists', t => {
+	const out = m.throw('WrongAcceptError', 'I cannot accept this', 118);
+	t.is(m.thrown(out, 'WrongAcceptError'), true);
+});

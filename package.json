@@ -4,11 +4,11 @@
   "description": "Throw Restify errors easily and consistently!",
   "main": "index.js",
   "dependencies": {
-    "restify-errors": "^4.3.0"
+    "restify-errors": "^5.0.0"
   },
   "devDependencies": {
     "ava": "*",
-    "codecov": "^2.2.0",
+    "codecov": "^3.0.0",
     "nyc": "^11.0.3",
     "xo": "*"
   },
